@@ -11,7 +11,8 @@ const getSum = (arr) => {
         }
     })
 }
-
+getSum(arr);
+// output= 13;
 
 // create a function for get over count of given number;
 const getOver = (num) => {
@@ -20,3 +21,5 @@ const getOver = (num) => {
     return (console.log(division.toFixed(0) + "." + module));
 
 }
+getOver(20);
+// output= 3.2
