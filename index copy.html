@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .label {
+        border: 1px solid navajowhite;
+        position: relative;
+    }
+
+    .center {
+        position: absolute;
+        top: 50%;
+
+
+
+    }
+
+    .above {
+        position: absolute;
+        top: -50px;
+        background-color: rosybrown;
+        /* translate: translateY(-50%); */
+
+        border-radius: 4px;
+        /* padding: 4px; */
+    }
+
+    #name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+    }
+</style>
+
+<body>
+
+    <label class="label">
+        <p id="name">name</p>
+        <input id="input" type="text"><br>
+    </label>
+    <input type="password"><br>
+
+    <button id="btn">
+        click
+    </button>
+
+
+</body>
+<script>
+    const input = docuemnt.getElementById('input');
+    const btn = docuemnt.getElementById('btn');
+
+    console.log("input", input);
+    console.log("btn", btn);
+
+    const handleClick = () => {
+        let value = input.value;
+        console.log(value);
+
+        const div = docuemnt.body.appendChild('div')
+        console.log("value", value)
+        alert(value, "helo")
+        div.innerHTML = value;
+
+
+    }
+    btn.addEventListener('click', handleClick())
+</script>
+
+</html>
